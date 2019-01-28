@@ -25,7 +25,6 @@
     "@taystack/js-helpers": "^0.7.0",
     "babel-loader": "^8.0.5",
     "codecov": "^3.1.0",
-    "coveralls": "^3.0.2",
     "jest": "^24.0.0"
   }
 }
