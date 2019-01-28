@@ -6,7 +6,7 @@
   "scripts": {
     "build": ". ./scripts/build.sh",
     "test": ". ./scripts/test.sh",
-    "publish-coverage": ". ./scripts/publish_coverage.sh",
+    "publish-coverage": ". ./scripts/publish_coverage.sh"
   },
   "keywords": [
     "javascript",
