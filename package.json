@@ -4,6 +4,7 @@
   "description": "JavaScript step-counter. Helpful for finding animation values for pure javascript animations.",
   "main": "dist/Counter.js",
   "scripts": {
+    "build": ". ./scripts/build.sh",
     "test": ". ./scripts/test.sh",
     "publish-coverage": ". ./scripts/publish_coverage.sh"
   },
