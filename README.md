@@ -67,11 +67,11 @@ I could then create an animation loop tracking the dog's position chasing, say, 
 ```javascript
 const dog = new Animal(5);
 const cat = new Animal(6, 10);
-cat.setTarget(Infinity); // cat is now running towards Infinity
+cat.target = Infinity; // cat is now running towards Infinity
 
 (function animateDog() {
   cat.animate();
-  dog.setTarget(cat.currentPosition); // dog is targeting the cat's position
+  dog.target = cat.currentPosition; // dog is targeting the cat's position
   dog.animate():
   setTimeout(() => {}, FRAMERATE);
   requestAnimationFrame(animateDog);
