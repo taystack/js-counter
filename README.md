@@ -101,10 +101,14 @@ Now, the `dog` will constantly be "chasing" the `cat` by adjusting it's `target`
 
    - #### `options (Object)` _\<optional>_
 
-      - ##### `increment (Number)`
-        The value added to *`counter.current`* after each call to *`counter.turn()`*.
+      - ##### `increment (Number > 0)`
+        The value used to calculate the step size of *`counter.current`* towards *`counter.to`* each time *`counter.turn()`* is called.
 
         ***Default***: `1`
+
+        ***Note:***: This value should always be positive
+
+        ***TODO:***: Make this use `Math.abs`
 
       - ##### `onDone(value) (Function)`
         `Function` to invoke when *`counter`* reaches it's target.
