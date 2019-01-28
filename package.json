@@ -1,0 +1,29 @@
+{
+  "name": "@taystack/js-counter",
+  "version": "0.1.0",
+  "description": "JavaScript step-counter. Helpful for finding animation values for pure javascript animations.",
+  "main": "dist/Counter.js",
+  "scripts": {
+    "test": ". ./scripts/test.sh",
+    "publish-coverage": ". ./scripts/publish_coverage.sh"
+  },
+  "keywords": [
+    "javascript",
+    "counter",
+    "animation",
+    "step",
+    "step-counter",
+    "animation-helper"
+  ],
+  "author": "Taylor Stackpole (taystack)",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@taystack/js-helpers": "^0.7.0",
+    "babel-loader": "^8.0.5",
+    "codecov": "^3.1.0",
+    "jest": "^24.0.0"
+  }
+}
