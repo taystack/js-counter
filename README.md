@@ -87,7 +87,7 @@ Now, the `dog` will constantly be "chasing" the `cat` by adjusting it's `target`
 
 ## Constructor
 
-### `const counter = new Couter(Number from, Number to[, Number increment=1])`
+### `const counter = new Couter(Number from, Number to[, Object options])`
 
 #### Params
 
@@ -103,6 +103,8 @@ Now, the `dog` will constantly be "chasing" the `cat` by adjusting it's `target`
 
       - ##### `increment (Number)`
         The value added to *`counter.current`* after each call to *`counter.turn()`*.
+
+        ***Default***: `1`
 
       - ##### `onDone(value) (Function)`
         `Function` to invoke when *`counter`* reaches it's target.
