@@ -1,8 +1,7 @@
-# JsCounter
-
-[![JsCounter](./JsCounter.png)](https://codecov.io/gh/taystack/js-counter)
 [![codecov](https://codecov.io/gh/taystack/js-counter/branch/master/graph/badge.svg)](https://codecov.io/gh/taystack/js-counter)
 [![Build Status](https://travis-ci.org/taystack/js-counter.svg?branch=master)](https://travis-ci.org/taystack/js-counter)
+
+[![JsCounter](./JsCounter.png)](https://codecov.io/gh/taystack/js-counter)
 
  - [Installation](#installation)
  - [What is it?](#what-is-it)
