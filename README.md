@@ -50,7 +50,7 @@ class Animal {
   constructor(speed, position = 0) {
     this.speed = speed;
     this.currentPosition = position;
-    this.position = new Counter(position, position, this.speed);
+    this.position = new Counter(position, position, {increment: this.speed});
   }
 
   set target(distance) {
