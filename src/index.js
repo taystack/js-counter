@@ -1,7 +1,14 @@
 class Counter {
-  constructor(from, to, increment) {
+  constructor(from, to, options = {}) {
     this.current = from;
-    this.setTarget(to, increment);
+    this.setTarget(to, options);
+  }
+
+  get options() {
+    return this.__options || {
+      increment: 1,
+      onDone: false,
+    };
   }
 
   get countingDown() {
@@ -20,15 +27,26 @@ class Counter {
     return (this.current > this.to ? -1 : 1) * multiplier;
   }
 
-  setTarget(to, increment = 1) {
+  setTarget(to, opts = {}) {
+    this.__options = {
+      ...this.options,
+      ...opts,
+    };
     this.to = to;
-    this.increment = this.getIncrement(increment);
+    this.increment = this.getIncrement(this.options.increment);
     return this;
   }
 
   turn() {
-    if (this.isDone) return this.value;
+    if (this.isDone) {
+      const value = this.value;
+      if (this.options.onDone) {
+        this.options.onDone(value);
+      }
+      return value;
+    };
     this.current += this.increment;
+    const value = this.value;
     return this.value;
   }
 }

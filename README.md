@@ -1,4 +1,4 @@
-[JsCounter](./JsCounter.png)
+![JsCounter](https://github.com/taystack/js-counter/blob/master/JsCounter.png?raw=true)
 
 [![codecov](https://codecov.io/gh/taystack/js-counter/branch/master/graph/badge.svg)](https://codecov.io/gh/taystack/js-counter)
 [![Build Status](https://travis-ci.org/taystack/js-counter.svg?branch=master)](https://travis-ci.org/taystack/js-counter)
@@ -10,7 +10,6 @@
  - [Use](#use)
  - [Documentation](#documentation)
    - [Constructor](#constructor)
-   - [Constructor Params](#constructor-params)
    - [Attributes](#attributes)
    - [Methods](#methods)
 
@@ -100,9 +99,16 @@ Now, the `dog` will constantly be "chasing" the `cat` by adjusting it's `target`
 
      The value that *`counter`* works towards after each call to *`counter.turn()`*.
 
-   - #### `increment (Number)` _optional_
+   - #### `options (Object)` _\<optional>_
 
-     The value added to *`counter.current`* after each call to *`counter.turn()`*.
+      - ##### `increment (Number)`
+        The value added to *`counter.current`* after each call to *`counter.turn()`*.
+
+      - ##### `onDone(value) (Function)`
+        `Function` to invoke when *`counter`* reaches it's target.
+
+        ***`onDone` params***
+        - `value (Number)` - *`counter.value`*
 
 ## Attributes
 
@@ -119,5 +125,7 @@ Now, the `dog` will constantly be "chasing" the `cat` by adjusting it's `target`
      ***Returns:***  `counter.value`
 
    - #### `counter.setTarget(Number to[, Number increment=1])`
+
+	 Updates the target value of *`counter`*
 
      ***Note:*** *Params are the same as constructor [to, increment] params*
