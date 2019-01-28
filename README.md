@@ -3,6 +3,8 @@
 
 [![JsCounter](./JsCounter.png)](https://codecov.io/gh/taystack/js-counter)
 
+---
+
  - [Installation](#installation)
  - [What is it?](#what-is-it)
  - [Use](#use)
