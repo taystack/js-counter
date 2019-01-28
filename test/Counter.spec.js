@@ -1,5 +1,5 @@
 import { Times } from "@taystack/js-helpers";
-import Counter from "../src/Counter";
+import Counter from "../src";
 
 
 describe("Counter", () => {

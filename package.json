@@ -1,6 +1,6 @@
 {
   "name": "@taystack/js-counter",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Taylor Stackpole (taystack)",
   "description": "JavaScript step-counter. Helpful for finding animation values for pure javascript animations.",
   "license": "MIT",
@@ -8,6 +8,9 @@
     "type": "git",
     "url": "git+https://github.com/taystack/js-counter.git"
   },
+  "files": [
+    "lib"
+  ],
   "main": "dist/Counter.js",
   "scripts": {
     "build": ". ./scripts/build.sh",
