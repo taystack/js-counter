@@ -2,11 +2,14 @@
 
 [![codecov](https://codecov.io/gh/taystack/js-counter/branch/master/graph/badge.svg)](https://codecov.io/gh/taystack/js-counter) [![Build Status](https://travis-ci.org/taystack/js-counter.svg?branch=master)](https://travis-ci.org/taystack/js-counter)
 
-- [Installation](#insatllation)
-- [Use](#what-is-it?)
-- [Use](#what-is-it-for?)
-- [Use](#why-was-it-written?)
-- [Use](#use)
+ - [Installation](#insatllation)
+ - [What is it?](#what-is-it?)
+ - [Use](#use)
+ - [Documentation](#documentation)
+   - [Constructor](#constructor)
+   - [Constructor Params](#constructor-params)
+   - [Attributes](#attributes)
+   - [Methods](#methods)
 
 ## Installation
 
@@ -68,7 +71,7 @@ cat.target = Infinity; // cat is now running towards Infinity
 
 (function animateDog() {
   cat.animate();
-  dog.target = cat.currentPosition; // dog is chasing cat.
+  dog.setTarget(cat.currentPosition); // dog is targeting the cat's position
   dog.animate():
   setTimeout(() => {}, FRAMERATE);
   requestAnimationFrame(animateDog);
@@ -76,3 +79,41 @@ cat.target = Infinity; // cat is now running towards Infinity
 ```
 
 Now, the `dog` will constantly be "chasing" the `cat` by adjusting it's `target` towards the cat's `currentPosition`.
+
+## Documentation
+
+#### Constructor
+
+#### `const counter = new Couter(Number from, Number to[, Number increment=1])`
+
+##### Constructor params
+
+##### `from (Number)`
+
+The value that *`counter`* starts at.
+
+##### `to (Number)`
+
+The value that *`counter`* works towards after each call to *`counter.turn()`*.
+
+##### `increment (Number)` _optional_
+
+The value added to *`counter.current`* after each call to *`counter.turn()`*.
+
+#### Attributes
+
+##### `counter.value`
+
+The current value of the counter
+
+#### Methods
+
+##### `counter.turn()`
+
+This will advance *`counter.current`* towards *`counter.to`*
+
+*Returns:*  `counter.value`
+
+##### `counter.setTarget(Number to[, Number increment=1])`
+
+*Params are the same as constructor [to, increment] params*
