@@ -106,9 +106,9 @@ Now, the `dog` will constantly be "chasing" the `cat` by adjusting it's `target`
 
         ***Default***: `1`
 
-        ***Note:***: This value should always be positive
+        ***Note***: This value should always be positive
 
-        ***TODO:***: Make this use `Math.abs`
+        ***TODO***: Make this use `Math.abs`
 
       - ##### `onDone(value) (Function)`
         `Function` to invoke when *`counter`* reaches it's target.
