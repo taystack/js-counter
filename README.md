@@ -76,8 +76,9 @@ cat.target = Infinity; // cat is now targeting Infinity (running away)
   cat.animate();
   dog.target = cat.currentPosition; // dog is targeting the cat's position
   dog.animate():
-  setTimeout(() => {}, FRAMERATE);
-  requestAnimationFrame(animateDog);
+  setTimeout(() => {
+    requestAnimationFrame(animateDog);
+  }, FRAMERATE);
 })();
 ```
 
