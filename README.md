@@ -2,6 +2,9 @@
 
 [![codecov](https://codecov.io/gh/taystack/js-counter/branch/master/graph/badge.svg)](https://codecov.io/gh/taystack/js-counter)
 
+ - [Installation](#insatllation)
+ - [Use](#use)
+
 # Installation
 
 ```bash
@@ -13,3 +16,5 @@ or
 ```bash
 npm i @taystack/js-counter
 ```
+
+# Use
