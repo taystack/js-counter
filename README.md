@@ -83,6 +83,37 @@ cat.target = Infinity; // cat is now targeting Infinity (running away)
 
 Now, the `dog` will constantly be "chasing" the `cat` by adjusting it's `target` towards the cat's `currentPosition`.
 
+If you wanted the dog to do something after it caught the cat, you could modify the `set target(distance)` setter method into an instance method that accepts `onDone`. Let's say, `hunt(distance, onDone)`:
+
+```javascript
+class Hunter extends Animal {
+  ...
+  static eat(animal) {/* ... */}
+
+  hunt(distance, onDone) {
+    this.onDone = onDone;
+    this.position.setTarget(distance, { onDone });
+  }
+  ...
+}
+```
+
+Now we can actually do something if our `dog` ever catches the `cat`. Let's try a wolf with our new `Hunter` class:
+
+```javascript
+const wolf = new Hunter(7);
+const cat = new Animal(6);
+cat.target = Infinity;
+
+(function animate() {
+  cat.animate();
+  wolf.hunt(cat.currentPosition, () => { wolf.eat(cat) });
+  setTimeout(() => {
+    requestAnimationFrame(animate);
+  }, FRAMERATE);
+})();
+```
+
 # Documentation
 
 ## Constructor
