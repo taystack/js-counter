@@ -1,3 +1,6 @@
+import { Once } from "@taystack/js-helpers";
+
+
 class Counter {
   constructor(from, to, options = {}) {
     this.current = from;
@@ -32,6 +35,7 @@ class Counter {
       ...this.options,
       ...opts,
     };
+    this.onDone = this.options.onDone ? Once(this.options.onDone) : false;
     this.to = to;
     this.increment = this.getIncrement(this.options.increment);
     return this;
@@ -40,9 +44,7 @@ class Counter {
   turn() {
     if (this.isDone) {
       const value = this.value;
-      if (this.options.onDone) {
-        this.options.onDone(value);
-      }
+      this.onDone && this.onDone(value);
       return value;
     };
     this.current += this.increment;

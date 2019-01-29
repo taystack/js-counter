@@ -29,7 +29,7 @@
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
-    "@taystack/js-helpers": "^0.7.0",
+    "@taystack/js-helpers": "0.8.1",
     "babel-loader": "^8.0.5",
     "codecov": "^3.1.0",
     "jest": "^24.0.0"

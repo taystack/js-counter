@@ -78,9 +78,11 @@ describe("Counter", () => {
   });
 
   it("should allow for a callback function", () => {
-    const onDone = jest.fn();
+    let calls = 0;
+    const onDone = jest.fn(() => { calls += 1; });
     const counter = new Counter(0, 5, { onDone });
     Times(10, () => { counter.turn(); });
     expect(onDone).toHaveBeenCalledWith(5);
+    expect(calls).toEqual(1);
   });
 });
