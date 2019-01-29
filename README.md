@@ -88,7 +88,7 @@ If you wanted the dog to do something after it caught the cat, you could modify 
 ```javascript
 class Hunter extends Animal {
   ...
-  static eat(animal) {/* ... */}
+  eat(animal) {/* ... */}
 
   hunt(distance, onDone) {
     this.onDone = onDone;
